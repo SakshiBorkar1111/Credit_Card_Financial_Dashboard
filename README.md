@@ -10,6 +10,7 @@ Steps:
 3) Import csv file into SQL
 
 Dax Queries Used:
+
 AgeGroup = SWITCH(
     TRUE(),'public cust_detail'[Customer_Age] < 30,"20-30",
     'public cust_detail'[Customer_Age] >= 30 && 'public cust_detail'[Customer_Age] < 40,"30-40",
