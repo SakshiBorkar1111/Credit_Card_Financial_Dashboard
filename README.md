@@ -11,16 +11,16 @@ Steps:
 
 Dax Queries Used:
 
-AgeGroup = SWITCH(
-    TRUE(),
-    
-    'public cust_detail'[Customer_Age] < 30,"20-30",
-    'public cust_detail'[Customer_Age] >= 30 && 'public cust_detail'[Customer_Age] < 40,"30-40",
-    'public cust_detail'[Customer_Age] >= 40 && 'public cust_detail'[Customer_Age] < 50,"40-50",
-    'public cust_detail'[Customer_Age] >= 50 && 'public cust_detail'[Customer_Age] < 60,"50-60",
-    'public cust_detail'[Customer_Age] >= 60,"60+",
-    "unknown"
-)
+AgeGroup = 
+          SWITCH(
+          TRUE(),
+          'public cust_detail'[Customer_Age] < 30,"20-30",
+          'public cust_detail'[Customer_Age] >= 30 && 'public cust_detail'[Customer_Age] < 40,"30-40",
+          'public cust_detail'[Customer_Age] >= 40 && 'public cust_detail'[Customer_Age] < 50,"40-50",
+          'public cust_detail'[Customer_Age] >= 50 && 'public cust_detail'[Customer_Age] < 60,"50-60",
+          'public cust_detail'[Customer_Age] >= 60,"60+",
+         "unknown"
+        )
 
 Income Group = SWITCH(
     TRUE(),
