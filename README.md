@@ -35,12 +35,18 @@ Income Group =
 )
 
 
-week_num2 = WEEKNUM('public cc_detail'[Week_Start_Date])
+week_num2 = 
 
-Revenue = 'public cc_detail'[Annual_Fees] + 'public cc_detail'[Total_Trans_Amt] + 'public cc_detail'[Interest_Earned]
+         WEEKNUM('public cc_detail'[Week_Start_Date])
+
+Revenue =
+
+       'public cc_detail'[Annual_Fees] + 'public cc_detail'[Total_Trans_Amt] + 'public cc_detail'[Interest_Earned]
 
 
-Current_Week_Revenue = CALCULATE(
+Current_Week_Revenue =
+
+     CALCULATE(
     SUM('public cc_detail'[Revenue]),
     FILTER(
         ALL('public cc_detail'),
@@ -48,7 +54,8 @@ Current_Week_Revenue = CALCULATE(
 
 
 
-Previous_Week_Revenue = CALCULATE(
+Previous_Week_Revenue =
+     CALCULATE(
     SUM('public cc_detail'[Revenue]),
     FILTER(
         ALL('public cc_detail'),
