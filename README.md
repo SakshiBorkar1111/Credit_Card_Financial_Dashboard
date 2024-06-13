@@ -12,6 +12,7 @@ Steps:
 Dax Queries Used:
 
 AgeGroup = 
+
           SWITCH(
           TRUE(),
           'public cust_detail'[Customer_Age] < 30,"20-30",
@@ -22,7 +23,9 @@ AgeGroup =
          "unknown"
         )
 
-Income Group = SWITCH(
+Income Group = 
+
+      SWITCH(
       TRUE(),
      'public cust_detail'[Income] < 35000,"Low",
     'public cust_detail'[Income] >= 35000 && 'public cust_detail'[Income] <70000,"Med",
