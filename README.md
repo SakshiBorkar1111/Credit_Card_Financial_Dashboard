@@ -23,9 +23,8 @@ AgeGroup =
         )
 
 Income Group = SWITCH(
-    TRUE(),
-    
-    'public cust_detail'[Income] < 35000,"Low",
+      TRUE(),
+     'public cust_detail'[Income] < 35000,"Low",
     'public cust_detail'[Income] >= 35000 && 'public cust_detail'[Income] <70000,"Med",
     'public cust_detail'[Income] >= 70000 && 'public cust_detail'[Income] <70000,"Med",
     'public cust_detail'[Income] > 70000,"High",
