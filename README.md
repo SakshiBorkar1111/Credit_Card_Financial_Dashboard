@@ -55,6 +55,7 @@ Current_Week_Revenue =
 
 
 Previous_Week_Revenue =
+
      CALCULATE(
     SUM('public cc_detail'[Revenue]),
     FILTER(
