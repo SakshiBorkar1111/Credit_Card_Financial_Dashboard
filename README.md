@@ -32,7 +32,7 @@ Income Group =
     'public cust_detail'[Income] >= 70000 && 'public cust_detail'[Income] <70000,"Med",
     'public cust_detail'[Income] > 70000,"High",
     "unknown"
-)
+     )
 
 
 week_num2 = 
