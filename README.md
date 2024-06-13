@@ -13,6 +13,7 @@ Dax Queries Used:
 
 AgeGroup = SWITCH(
     TRUE(),
+    
     'public cust_detail'[Customer_Age] < 30,"20-30",
     'public cust_detail'[Customer_Age] >= 30 && 'public cust_detail'[Customer_Age] < 40,"30-40",
     'public cust_detail'[Customer_Age] >= 40 && 'public cust_detail'[Customer_Age] < 50,"40-50",
@@ -23,6 +24,7 @@ AgeGroup = SWITCH(
 
 Income Group = SWITCH(
     TRUE(),
+    
     'public cust_detail'[Income] < 35000,"Low",
     'public cust_detail'[Income] >= 35000 && 'public cust_detail'[Income] <70000,"Med",
     'public cust_detail'[Income] >= 70000 && 'public cust_detail'[Income] <70000,"Med",
