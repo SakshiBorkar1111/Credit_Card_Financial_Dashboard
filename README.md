@@ -20,7 +20,7 @@ AgeGroup =
           'public cust_detail'[Customer_Age] >= 40 && 'public cust_detail'[Customer_Age] < 50,"40-50",
           'public cust_detail'[Customer_Age] >= 50 && 'public cust_detail'[Customer_Age] < 60,"50-60",
           'public cust_detail'[Customer_Age] >= 60,"60+",
-         "unknown"
+          "unknown"
         )
 
 Income Group = 
@@ -28,10 +28,10 @@ Income Group =
       SWITCH(
       TRUE(),
      'public cust_detail'[Income] < 35000,"Low",
-    'public cust_detail'[Income] >= 35000 && 'public cust_detail'[Income] <70000,"Med",
-    'public cust_detail'[Income] >= 70000 && 'public cust_detail'[Income] <70000,"Med",
-    'public cust_detail'[Income] > 70000,"High",
-    "unknown"
+     'public cust_detail'[Income] >= 35000 && 'public cust_detail'[Income] <70000,"Med",
+     'public cust_detail'[Income] >= 70000 && 'public cust_detail'[Income] <70000,"Med",
+     'public cust_detail'[Income] > 70000,"High",
+     "unknown"
      )
 
 
@@ -47,9 +47,9 @@ Revenue =
 Current_Week_Revenue =
 
      CALCULATE(
-    SUM('public cc_detail'[Revenue]),
-    FILTER(
-        ALL('public cc_detail'),
+     SUM('public cc_detail'[Revenue]),
+     FILTER(
+     ALL('public cc_detail'),
         'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2])))
 
 
@@ -57,9 +57,9 @@ Current_Week_Revenue =
 Previous_Week_Revenue =
 
      CALCULATE(
-    SUM('public cc_detail'[Revenue]),
-    FILTER(
-        ALL('public cc_detail'),
+     SUM('public cc_detail'[Revenue]),
+     FILTER(
+     ALL('public cc_detail'),
         'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2])-1))
 
 
